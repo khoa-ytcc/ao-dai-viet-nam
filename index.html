@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồn Việt - Tinh Hoa Nghệ Thuật Áo Dài Truyền Thống & Hiện Đại</title>
+    <meta name="description" content="Khám phá vẻ đẹp bất hủ của tà áo dài Việt Nam. Tinh hoa di sản văn hóa, may đo thủ công tinh tế, tôn vinh nét duyên dáng người phụ nữ Việt.">
+
+    <!-- Google Fonts: Playfair Display & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        heritage: {
+                            red: '#9B1B30',      // Đỏ đô truyền thống
+                            darkred: '#731221',  // Đỏ trầm quý tộc
+                            gold: '#D4AF37',     // Vàng hoàng gia
+                            lightgold: '#FDF6E2',// Vàng kem nhạt
+                            lotus: '#E88B9E',    // Hồng sen
+                            cream: '#FCF9F2',    // Trắng ngà tơ tằm
+                            charcoal: '#2D2D2D'  // Đen mực nho
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Be Vietnam Pro"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Tùy chỉnh hiệu ứng gợn sóng và hoa văn truyền thống */
+        .pattern-bg {
+            background-color: #FCF9F2;
+            background-image: radial-gradient(#D4AF37 0.75px, transparent 0.75px), radial-gradient(#D4AF37 0.75px, #FCF9F2 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            background-opacity: 0.08;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, #ECC855 0%, #D4AF37 50%, #AA820A 100%);
+        }
+
+        .red-gradient {
+            background: linear-gradient(135deg, #A82035 0%, #871324 100%);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #DFC066 0%, #C9971D 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .silk-border {
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 10px 30px -10px rgba(155, 27, 48, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-heritage-cream font-sans text-heritage-charcoal antialiased selection:bg-heritage-red selection:text-white">
+
+    <!-- 1. THANH ĐIỀU HƯỚNG TRANG (NAVBAR) -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md border-b border-heritage-gold/20 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo thương hiệu -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-full red-gradient flex items-center justify-center text-heritage-gold border-2 border-heritage-gold shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-fan text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-wider text-heritage-red block leading-none">HỒN VIỆT</span>
+                        <span class="text-[10px] tracking-[0.25em] text-heritage-gold uppercase font-semibold">Áo Dài Di Sản</span>
+                    </div>
+                </a>
+
+                <!-- Menu chính (Desktop) -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#hero" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Trang Chủ</a>
+                    <a href="#heritage" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Nguồn Cội Di Sản</a>
+                    <a href="#collections" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Bộ Sưu Tập</a>
+                    <a href="#craftsmanship" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Nghệ Thuật May Đo</a>
+                    <a href="#pricing" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Bảng Giá</a>
+                    <a href="#contact" class="text-heritage-charcoal hover:text-heritage-red transition-colors py-1">Liên Hệ</a>
+                </nav>
+
+                <!-- Nút CTA -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#contact" class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-white red-gradient hover:brightness-110 shadow-md hover:shadow-lg transition-all border border-heritage-gold/40 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Đặt May Riêng
+                    </a>
+                </div>
+
+                <!-- Nút bật menu di động -->
+                <button id="mobileMenuBtn" aria-label="Mở menu" class="md:hidden text-heritage-red p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu di động (Mobile Dropdown) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-heritage-gold/30 px-6 py-5 shadow-xl transition-all">
+            <div class="flex flex-col space-y-4 font-medium text-base">
+                <a href="#hero" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Trang Chủ</a>
+                <a href="#heritage" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Nguồn Cội Di Sản</a>
+                <a href="#collections" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Bộ Sưu Tập</a>
+                <a href="#craftsmanship" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Nghệ Thuật May Đo</a>
+                <a href="#pricing" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Bảng Giá</a>
+                <a href="#contact" class="mobile-link text-heritage-charcoal hover:text-heritage-red py-1">Liên Hệ</a>
+                <a href="#contact" class="mobile-link w-full text-center py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase text-white red-gradient shadow mt-2">
+                    Đặt Lịch May Đo
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO BANNER SECTION -->
+    <section id="hero" class="relative pt-28 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-gradient-to-b from-heritage-lightgold/40 via-heritage-cream to-white">
+        <!-- Hoa văn trang trí góc -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-heritage-lotus/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 rounded-full bg-heritage-gold/10 blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Cột nội dung giới thiệu -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-heritage-red/10 border border-heritage-red/20 text-heritage-red text-xs sm:text-sm font-semibold tracking-wide">
+                        <i class="fa-solid fa-sparkles text-heritage-gold"></i>
+                        <span>Tinh Hoa Di Sản Văn Hóa Việt Nam</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-heritage-red leading-tight">
+                        Duyên Dáng Tà Áo Dài, <br/>
+                        <span class="text-gold-gradient italic font-normal">Nâng Niu Cốt Cách Việt</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-heritage-charcoal/80 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        Áo dài không chỉ là một bộ y phục, mà là biểu tượng của tâm hồn, khí chất thanh cao và vẻ đẹp thuần hậu của người phụ nữ Việt Nam qua từng thăng trầm lịch sử.
+                    </p>
+
+                    <!-- Nút bấm hành động (CTA) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-3">
+                        <a href="#collections" class="w-full sm:w-auto px-8 py-3.5 rounded-full red-gradient text-white font-medium text-sm tracking-wide shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 border border-heritage-gold/50">
+                            <span>Khám Phá Bộ Sưu Tập</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#craftsmanship" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white text-heritage-charcoal font-medium text-sm tracking-wide border border-heritage-gold/40 hover:bg-heritage-lightgold/50 transition-all shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-gem text-heritage-gold"></i>
+                            <span>Nghệ Thuật Cắt May</span>
+                        </a>
+                    </div>
+
+                    <!-- Điểm bảo chứng tin cậy -->
+                    <div class="pt-6 border-t border-heritage-gold/20 grid grid-cols-3 gap-4 text-center lg:text-left max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-heritage-red">30+</p>
+                            <p class="text-xs text-gray-500 font-medium">Năm Gìn Giữ Nghề</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-heritage-red">100%</p>
+                            <p class="text-xs text-gray-500 font-medium">Lụa Tơ Tằm Tự Nhiên</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl sm:text-3xl font-bold text-heritage-red">24</p>
+                            <p class="text-xs text-gray-500 font-medium">Chỉ Số May Chuẩn Dáng</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột hình ảnh minh họa Hero -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Khung viền mạ vàng cách điệu -->
+                        <div class="absolute -inset-3 rounded-2xl bg-gradient-to-tr from-heritage-gold via-heritage-lotus/40 to-heritage-red/60 opacity-40 blur-lg"></div>
+                        
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-heritage-gold/40 bg-white">
+                            <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=900&q=85" 
+                                 alt="Thiếu nữ Việt Nam trong tà áo dài truyền thống" 
+                                 class="w-full h-[480px] object-cover object-top hover:scale-105 transition-transform duration-700">
+                            
+                            <!-- Thẻ phụ chú nổi trên ảnh -->
+                            <div class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-xl border border-heritage-gold/40 shadow-lg">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-full bg-heritage-red text-white flex items-center justify-center shrink-0">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-serif font-bold text-sm text-heritage-darkred">Đặc Trưng Tà Áo Dài</h4>
+                                        <p class="text-xs text-heritage-charcoal/80">Kín đáo mà gợi cảm, mộc mạc mà sang trọng tuyệt mỹ.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. LỊCH SỬ & DÒNG CHẢY DI SẢN (HERITAGE TIMELINE) -->
+    <section id="heritage" class="py-20 pattern-bg border-y border-heritage-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Dòng Chảy Lịch Sử</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Hành Trình Trăm Năm Của Tà Áo Dài</h2>
+                <p class="text-sm sm:text-base text-gray-600 font-light">
+                    Mỗi giai đoạn lịch sử là một bước chuyển mình, kết tinh từ bản sắc văn hóa dân tộc và hơi thở thời đại.
+                </p>
+                <div class="w-20 h-0.5 bg-heritage-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Dòng thời gian 4 giai đoạn quan trọng -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Thẻ 1 -->
+                <div class="bg-white rounded-xl p-6 silk-border hover:-translate-y-1.5 transition-all duration-300 relative group">
+                    <span class="text-4xl font-serif font-extrabold text-heritage-gold/30 block mb-2">01</span>
+                    <h3 class="font-serif text-lg font-bold text-heritage-darkred mb-2">Áo Giao Lĩnh & Tứ Thân</h3>
+                    <p class="text-xs text-heritage-gold font-semibold uppercase mb-3">Thế kỷ XVII - XIX</p>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">
+                        Tiền thân của áo dài, gắn liền với hình ảnh người phụ nữ tần tảo, bốn tà áo tượng trưng cho tứ thân phụ mẫu bốn bề yêu thương.
+                    </p>
+                </div>
+
+                <!-- Thẻ 2 -->
+                <div class="bg-white rounded-xl p-6 silk-border hover:-translate-y-1.5 transition-all duration-300 relative group">
+                    <span class="text-4xl font-serif font-extrabold text-heritage-gold/30 block mb-2">02</span>
+                    <h3 class="font-serif text-lg font-bold text-heritage-darkred mb-2">Áo Ngũ Thân Quý Phái</h3>
+                    <p class="text-xs text-heritage-gold font-semibold uppercase mb-3">Thời Chúa Nguyễn</p>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">
+                        Thiết kế 5 thân biểu trưng cho đạo ngũ thường: Nhân, Lễ, Nghĩa, Trí, Tín; tạo nên chuẩn mực trang phục đoan trang nơi cung đình và chốn thị thành.
+                    </p>
+                </div>
+
+                <!-- Thẻ 3 -->
+                <div class="bg-white rounded-xl p-6 silk-border hover:-translate-y-1.5 transition-all duration-300 relative group">
+                    <span class="text-4xl font-serif font-extrabold text-heritage-gold/30 block mb-2">03</span>
+                    <h3 class="font-serif text-lg font-bold text-heritage-darkred mb-2">Áo Lemur & Lê Phổ</h3>
+                    <p class="text-xs text-heritage-gold font-semibold uppercase mb-3">Thập niên 1930 - 1950</p>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">
+                        Cuộc cách tân ngoạn mục đưa áo dài ôm khít đường cong cơ thể, phối cùng cổ cao kín đáo và tà áo buông mềm mại chấm gót.
+                    </p>
+                </div>
+
+                <!-- Thẻ 4 -->
+                <div class="bg-white rounded-xl p-6 silk-border hover:-translate-y-1.5 transition-all duration-300 relative group">
+                    <span class="text-4xl font-serif font-extrabold text-heritage-gold/30 block mb-2">04</span>
+                    <h3 class="font-serif text-lg font-bold text-heritage-darkred mb-2">Áo Dài Đương Đại</h3>
+                    <p class="text-xs text-heritage-gold font-semibold uppercase mb-3">Hôm nay & Mai sau</p>
+                    <p class="text-sm text-gray-600 leading-relaxed font-light">
+                        Sự giao hòa giữa tinh thần truyền thống và phom dáng cách tân hiện đại, tự hào hiện diện tại các sự kiện quốc tế và lễ hội văn hóa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BỘ SƯU TẬP TIÊU BIỂU (COLLECTIONS) -->
+    <section id="collections" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Tuyệt Tác Nghệ Thuật</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Bộ Sưu Tập Áo Dài Độc Bản</h2>
+                <p class="text-sm sm:text-base text-gray-600 font-light">
+                    Mỗi tà áo là một tác phẩm được thêu tay tỉ mỉ từ các nghệ nhân làng lụa lâu đời, tôn lên vẻ thanh tao đài các.
+                </p>
+                <div class="w-20 h-0.5 bg-heritage-gold mx-auto mt-4"></div>
+            </div>
+
+            <!-- Các nút bộ lọc danh mục (Filter tabs) -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button onclick="filterCategory('all')" class="filter-btn active px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-heritage-red bg-heritage-red text-white transition-all">
+                    Tất Cả Mẫu
+                </button>
+                <button onclick="filterCategory('cuoi')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-heritage-gold/50 bg-heritage-cream text-heritage-charcoal hover:bg-heritage-lightgold transition-all">
+                    Áo Dài Cưới Hỏi
+                </button>
+                <button onclick="filterCategory('truyenthong')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-heritage-gold/50 bg-heritage-cream text-heritage-charcoal hover:bg-heritage-lightgold transition-all">
+                    Lễ Hội & Truyền Thống
+                </button>
+                <button onclick="filterCategory('cachtan')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-heritage-gold/50 bg-heritage-cream text-heritage-charcoal hover:bg-heritage-lightgold transition-all">
+                    Áo Dài Cách Tân
+                </button>
+                <button onclick="filterCategory('congso')" class="filter-btn px-5 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide border border-heritage-gold/50 bg-heritage-cream text-heritage-charcoal hover:bg-heritage-lightgold transition-all">
+                    Học Đường & Công Sở
+                </button>
+            </div>
+
+            <!-- Lưới danh sách sản phẩm -->
+            <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Sản phẩm 1: Áo dài Cưới - Phượng Hoàng Cung Đình -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="cuoi">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Cưới Phượng Hoàng Cung Đình" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-heritage-red text-white text-[11px] font-bold uppercase rounded-full shadow">Áo Cưới</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Áo Dài Phượng Các</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Gấm Thượng Hạng</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Sắc đỏ nhung quý phái, đính kết họa tiết phượng hoàng mạ chỉ vàng thủ công 100 giờ.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">May đo riêng / Thuê</span>
+                            <button onclick="openModal('Áo Dài Phượng Các', 'Chất liệu gấm tơ tằm thượng hạng, thêu nổi chim phượng chỉ vàng hoàng tộc. Thích hợp cho ngày thành hôn trang trọng nhất đời người.', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 2: Áo dài Truyền thống - Sen Vàng Bạch Liên -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="truyenthong">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Bạch Liên Sen Vàng" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-heritage-gold text-heritage-charcoal text-[11px] font-bold uppercase rounded-full shadow">Di Sản</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Bạch Liên Ngân Các</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Lụa Vạn Phúc</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Lụa trắng tơ tằm dệt hoa sen chìm truyền thống, giữ trọn nét thuần khiết thanh nhã.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">May đo chuẩn phom</span>
+                            <button onclick="openModal('Bạch Liên Ngân Các', 'Chất liệu lụa dệt hoa văn sen thủ công Hà Đông. Tà áo rủ mềm tự nhiên, thoáng mát mùa hạ và ấm áp mùa thu đông.', 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 3: Áo dài Cách tân - Thanh Trúc Hội An -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="cachtan">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Cách Tân Thanh Trúc" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-emerald-700 text-white text-[11px] font-bold uppercase rounded-full shadow">Cách Tân</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Áo Dài Thanh Trúc</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Tơ Tằm Cao Cấp</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Cổ tròn thanh thoát, tay lửng bồng nhẹ nhàng, tiện lợi cho dạo phố và các dịp họp mặt.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">Phom hiện đại</span>
+                            <button onclick="openModal('Áo Dài Thanh Trúc', 'Thiết kế cách tân năng động nhưng giữ trọn tinh thần áo dài. Phối cùng chân váy xòe hoặc quần lụa suông tạo phong thái tươi trẻ, sang trọng.', 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 4: Áo Dài Học Đường & Công Sở -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="congso">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Nữ Sinh & Công Sở" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-sky-700 text-white text-[11px] font-bold uppercase rounded-full shadow">Công Sở / Học Đường</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Tà Áo Tinh Khôi</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Chiffon Nhật</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Độ co giãn nhẹ, không nhăn, bay bổng tà áo mang lại cảm giác thoải mái suốt cả ngày dài.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">May đo số lượng lớn</span>
+                            <button onclick="openModal('Tà Áo Tinh Khôi', 'Vải chiffon Nhật Bản co giãn 4 chiều, thấm hút mồ hôi tối ưu. Lựa chọn số 1 cho giáo viên, học sinh, sinh viên và nhân sự văn phòng.', 'https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 5: Áo Dài Cưới Cặp Đôi Long Phụng -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="cuoi">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Cưới Long Phụng Hòa Minh" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-heritage-red text-white text-[11px] font-bold uppercase rounded-full shadow">Áo Dài Cặp</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Long Phụng Hòa Minh</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Gấm Sa Hàn</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Cặp áo cô dâu - chú rể đồng điệu về sắc đỏ cát tường, gắn kết lứa đôi son sắt bền chặt.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">Bộ đôi cưới hỏi</span>
+                            <button onclick="openModal('Long Phụng Hòa Minh', 'Bộ áo dài đôi dành cho cô dâu chú rể. Áo nam thêu rồng uy phong, áo nữ thêu chim phượng uyển chuyển, mang thông điệp trăm năm hạnh phúc.', 'https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sản phẩm 6: Áo Dài Lễ Hội - Dạ Khúc Lam Ngọc -->
+                <div class="product-card group bg-white rounded-2xl overflow-hidden silk-border hover:shadow-xl transition-all" data-category="truyenthong">
+                    <div class="relative overflow-hidden h-96 bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80" 
+                             alt="Áo Dài Dạ Khúc Lam Ngọc" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 px-3 py-1 bg-indigo-900 text-white text-[11px] font-bold uppercase rounded-full shadow">Quý Phái</span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <h3 class="font-serif text-lg font-bold text-heritage-darkred group-hover:text-heritage-red transition-colors">Dạ Khúc Lam Ngọc</h3>
+                            <span class="text-sm font-bold text-heritage-gold">Nhung Tơ Tằm</span>
+                        </div>
+                        <p class="text-xs text-gray-500 font-light line-clamp-2">Sắc xanh ngọc huyền ảo từ chất nhung tơ thượng thừa, đính cườm dạ hội lấp lánh sang trọng.</p>
+                        <div class="pt-3 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-xs font-semibold text-heritage-charcoal">Dạ tiệc & Hội nghị</span>
+                            <button onclick="openModal('Dạ Khúc Lam Ngọc', 'Được may từ nhung tơ tằm dệt mỏng cao cấp, không bị nặng nề, tạo sự uy quyền và quyến rũ tuyệt đối cho các sự kiện trang trọng.', 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=700&q=80')" 
+                                    class="text-xs font-bold text-heritage-red hover:underline flex items-center gap-1">
+                                Chi tiết <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. NGHỆ THUẬT MAY ĐO & CHẤT LIỆU (CRAFTSMANSHIP) -->
+    <section id="craftsmanship" class="py-20 pattern-bg border-t border-heritage-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Cột hình ảnh minh họa quy trình -->
+                <div class="lg:col-span-5 order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="absolute -inset-2 bg-heritage-gold/30 rounded-2xl blur-md"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-xl border border-heritage-gold/40">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=85" 
+                                 alt="Bàn tay nghệ nhân may đo áo dài" 
+                                 class="w-full h-[500px] object-cover">
+                        </div>
+                        <!-- Thẻ trích dẫn -->
+                        <div class="absolute -bottom-6 -right-6 glass-card p-5 rounded-2xl max-w-xs border border-heritage-gold/50 shadow-xl hidden sm:block">
+                            <i class="fa-solid fa-quote-left text-heritage-gold text-2xl mb-2 block"></i>
+                            <p class="font-serif italic text-xs text-heritage-darkred leading-relaxed">
+                                "Từng đường kim, mũi chỉ không chỉ nối liền mảnh vải, mà còn gìn giữ tâm hồn thanh cao của người thợ Việt."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột 4 bước may đo hoàng gia -->
+                <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+                    <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Quy Trình May Chuẩn Xác</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Tinh Hoa May Đo Tận Tâm</h2>
+                    <p class="text-sm sm:text-base text-gray-600 font-light">
+                        Một chiếc áo dài đẹp phải vừa vặn như làn da thứ hai của người mặc: tôn eo thon, nâng ngực nhẹ, tà áo thướt tha chạm đúng độ dài lý tưởng.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Bước 1 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white silk-border">
+                            <div class="w-10 h-10 rounded-full red-gradient text-white flex items-center justify-center font-serif font-bold text-sm shrink-0">
+                                01
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-heritage-darkred text-base">Lấy 24 Chỉ Số Vóc Dáng Vàng</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Đo đạc tỉ mỉ từ độ xuôi của vai, hạ ngực, hạ eo đến độ cong cột sống để đảm bảo không một nếp nhăn dư thừa.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bước 2 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white silk-border">
+                            <div class="w-10 h-10 rounded-full red-gradient text-white flex items-center justify-center font-serif font-bold text-sm shrink-0">
+                                02
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-heritage-darkred text-base">Chọn Lọc Lụa & Gấm Thượng Hạng</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Sử dụng 100% lụa tơ tằm Vạn Phúc - Hà Đông, Gấm Thái Tuấn và tơ tằm tự nhiên mềm mát, giữ màu vĩnh cửu.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bước 3 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white silk-border">
+                            <div class="w-10 h-10 rounded-full red-gradient text-white flex items-center justify-center font-serif font-bold text-sm shrink-0">
+                                03
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-heritage-darkred text-base">Thêu Tay & Đính Kết Tinh Xảo</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Từng cánh sen, đóa mẫu đơn hay họa tiết rồng phượng được các nghệ nhân lão thành thêu tay thủ công sắc nét.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bước 4 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white silk-border">
+                            <div class="w-10 h-10 rounded-full red-gradient text-white flex items-center justify-center font-serif font-bold text-sm shrink-0">
+                                04
+                            </div>
+                            <div>
+                                <h3 class="font-serif font-bold text-heritage-darkred text-base">Cân Chỉnh Phom & Bảo Hành Trọn Đời</h3>
+                                <p class="text-xs sm:text-sm text-gray-600 mt-1">Thử áo trực tiếp, tinh chỉnh theo từng cử động và hỗ trợ nới/bóp phom dáng miễn phí trọn đời cho quý khách.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. BẢNG GIÁ DỊCH VỤ (PRICING PACKAGES) -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Dịch Vụ & Chi Phí</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Gói Dịch Vụ May & Cho Thuê</h2>
+                <p class="text-sm sm:text-base text-gray-600 font-light">
+                    Mức giá minh bạch, phù hợp với mọi nhu cầu từ kỷ yếu, hội nghị cho đến ngày cưới trọng đại.
+                </p>
+                <div class="w-20 h-0.5 bg-heritage-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                <!-- Gói 1: Thuê chụp ảnh / Sự kiện -->
+                <div class="bg-heritage-cream/60 rounded-2xl p-8 silk-border flex flex-col justify-between hover:border-heritage-gold transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Tiện Lợi & Nhanh Chóng</span>
+                        <h3 class="font-serif text-2xl font-bold text-heritage-darkred">Thuê Áo Dài Sự Kiện</h3>
+                        <p class="text-xs text-gray-500 font-light">Phù hợp chụp ảnh kỷ yếu, hội thảo, dạo phố, chụp ảnh Tết.</p>
+                        
+                        <div class="py-4 border-y border-heritage-gold/20">
+                            <span class="text-3xl font-serif font-extrabold text-heritage-red">250.000₫</span>
+                            <span class="text-xs text-gray-500">/ bộ / 2 ngày</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-600">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Hơn 500 mẫu áo dài sẵn có đủ size (S - 3XL)</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Miễn phí phụ kiện: bờm tóc, nón lá, quạt lụa</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Hỗ trợ bóp eo, chỉnh tay vừa khít vóc dáng</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Giặt hấp thơm tho, sẵn sàng mặc ngay</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="mt-8 block text-center py-3 rounded-full border border-heritage-gold text-heritage-darkred font-semibold text-xs uppercase tracking-wider hover:bg-heritage-gold hover:text-white transition-colors">
+                        Đặt Thuê Ngay
+                    </a>
+                </div>
+
+                <!-- Gói 2: May đo thiết kế sẵn (Phổ biến nhất) -->
+                <div class="bg-white rounded-2xl p-8 silk-border flex flex-col justify-between relative shadow-xl border-2 border-heritage-red">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 red-gradient text-white text-[11px] font-bold uppercase rounded-full shadow tracking-wider">
+                        Được Lựa Chọn Nhiều Nhất
+                    </div>
+
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-heritage-red">May Đo Chuẩn Xác</span>
+                        <h3 class="font-serif text-2xl font-bold text-heritage-darkred">May Đo Thiết Kế</h3>
+                        <p class="text-xs text-gray-500 font-light">Sở hữu chiếc áo dài may theo số đo riêng của bạn.</p>
+                        
+                        <div class="py-4 border-y border-heritage-gold/20">
+                            <span class="text-3xl font-serif font-extrabold text-heritage-red">1.250.000₫</span>
+                            <span class="text-xs text-gray-500">/ bộ hoàn thiện</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-600">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-red"></i>
+                                <span>Bao gồm cả vải lụa tơ tằm cao cấp & công may</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-red"></i>
+                                <span>Lấy số đo tận nơi hoặc đo trực tiếp tại cửa hàng</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-red"></i>
+                                <span>Kèm quần lụa phi bóng cùng tông màu</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-red"></i>
+                                <span>Bảo hành chỉnh sửa đường may trọn đời</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="mt-8 block text-center py-3.5 rounded-full red-gradient text-white font-semibold text-xs uppercase tracking-wider shadow-md hover:brightness-110 transition-all">
+                        Tư Vấn May Ngay
+                    </a>
+                </div>
+
+                <!-- Gói 3: Áo dài Cưới / Nghệ nhân Độc bản -->
+                <div class="bg-heritage-cream/60 rounded-2xl p-8 silk-border flex flex-col justify-between hover:border-heritage-gold transition-all">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Cao Cấp Hoàng Gia</span>
+                        <h3 class="font-serif text-2xl font-bold text-heritage-darkred">Độc Bản Cô Dâu</h3>
+                        <p class="text-xs text-gray-500 font-light">Thiết kế áo dài cưới thêu tay độc bản duy nhất cho bạn.</p>
+                        
+                        <div class="py-4 border-y border-heritage-gold/20">
+                            <span class="text-3xl font-serif font-extrabold text-heritage-red">3.800.000₫</span>
+                            <span class="text-xs text-gray-500">/ bộ độc bản</span>
+                        </div>
+
+                        <ul class="space-y-3 text-xs sm:text-sm text-gray-600">
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Nghệ nhân trên 25 năm kinh nghiệm trực tiếp may</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Gấm tơ tằm dệt tay hoặc lụa tơ sống quý phái</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Đính kết pha lê Swarovski & thêu tay chỉ tơ</span>
+                            </li>
+                            <li class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check text-heritage-gold"></i>
+                                <span>Tặng kèm mấn đội đầu thủ công đồng điệu</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#contact" class="mt-8 block text-center py-3 rounded-full border border-heritage-gold text-heritage-darkred font-semibold text-xs uppercase tracking-wider hover:bg-heritage-gold hover:text-white transition-colors">
+                        Đặt Lịch Nghệ Nhân
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CẢM NHẬN KHÁCH HÀNG (TESTIMONIALS) -->
+    <section class="py-20 pattern-bg border-y border-heritage-gold/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Chia Sẻ & Yêu Thương</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Khách Hàng Nói Gì Về Chúng Tôi</h2>
+                <div class="w-20 h-0.5 bg-heritage-gold mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Đánh giá 1 -->
+                <div class="bg-white p-7 rounded-2xl silk-border space-y-4 shadow-sm">
+                    <div class="flex text-amber-400 text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600 italic leading-relaxed">
+                        "Mình đặt may bộ áo dài cưới màu đỏ phượng hoàng tại Hồn Việt. Khi nhận áo thật sự vỡ òa vì đường thêu quá tinh tế, mặc lên vừa in từng cm mà không bị kích nách hay lộ bụng chút nào!"
+                    </p>
+                    <div class="pt-3 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-heritage-lotus/30 flex items-center justify-center font-serif font-bold text-heritage-red">
+                            TH
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-heritage-darkred">Thu Hương</h4>
+                            <p class="text-[11px] text-gray-500">Cô dâu tại Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đánh giá 2 -->
+                <div class="bg-white p-7 rounded-2xl silk-border space-y-4 shadow-sm">
+                    <div class="flex text-amber-400 text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600 italic leading-relaxed">
+                        "Là một giáo viên đứng lớp nhiều giờ, mình rất sợ áo dài thô cứng hay bí bách. Đặt may áo lụa ở đây mặc cực kỳ êm ái, tà áo rủ đẹp và giặt máy nhẹ nhàng vẫn phẳng phiu như mới."
+                    </p>
+                    <div class="pt-3 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-heritage-lightgold flex items-center justify-center font-serif font-bold text-heritage-gold">
+                            MA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-heritage-darkred">Cô Mai Anh</h4>
+                            <p class="text-[11px] text-gray-500">Giáo viên trường THPT Chu Văn An</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Đánh giá 3 -->
+                <div class="bg-white p-7 rounded-2xl silk-border space-y-4 shadow-sm">
+                    <div class="flex text-amber-400 text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-gray-600 italic leading-relaxed">
+                        "Tôi sống tại Pháp đã 15 năm, mỗi dịp Tết đều nhớ tà áo dài quê hương. Đặt may online gửi số đo qua tin nhắn mà các bạn làm chuẩn xác ngoài mong đợi, ai bên này nhìn cũng khen tấm tắc."
+                    </p>
+                    <div class="pt-3 border-t border-gray-100 flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center font-serif font-bold text-heritage-red">
+                            EL
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-heritage-darkred">Elena Trần</h4>
+                            <p class="text-[11px] text-gray-500">Kiều bào tại Paris, Pháp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FORM LIÊN HỆ & ĐẶT LỊCH MAY ĐO (CONTACT & BOOKING) -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-heritage-cream/70 rounded-3xl silk-border p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Thông tin liên hệ showroom -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs uppercase font-bold tracking-widest text-heritage-gold">Tư Vấn Tận Tâm</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-heritage-red">Gặp Gỡ Nghệ Nhân May Đo</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed font-light">
+                            Hãy để lại lời nhắn hoặc đặt lịch hẹn trước để nghệ nhân chuẩn bị mẫu vải và tiếp đón bạn chu đáo nhất tại không gian trà đạo & lụa là.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center gap-3 text-sm text-heritage-charcoal">
+                                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-heritage-red shadow-sm shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <span>Phố Cổ Hội An & Tràng Tiền, Hà Nội</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-sm text-heritage-charcoal">
+                                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-heritage-red shadow-sm shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <span class="font-semibold text-heritage-red">Hotline: 0988.xxx.xxx (Tư vấn 24/7)</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 text-sm text-heritage-charcoal">
+                                <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-heritage-red shadow-sm shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <span>Mở cửa: 08:30 – 21:00 (Tất cả các ngày trong tuần)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form điền thông tin -->
+                    <div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 silk-border shadow-md">
+                        <form id="bookingForm" onsubmit="handleBooking(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Họ và tên của bạn *</label>
+                                    <input type="text" required placeholder="Ví dụ: Nguyễn Thị Lan" 
+                                           class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-heritage-red focus:ring-1 focus:ring-heritage-red text-sm outline-none transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Số điện thoại / Zalo *</label>
+                                    <input type="tel" required placeholder="09xxxxxxxx" 
+                                           class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-heritage-red focus:ring-1 focus:ring-heritage-red text-sm outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Nhu cầu của bạn</label>
+                                    <select class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-heritage-red focus:ring-1 focus:ring-heritage-red text-sm outline-none transition-all bg-white">
+                                        <option value="may-cuoi">May đo áo dài cưới</option>
+                                        <option value="may-truyenthong">May đo áo dài truyền thống</option>
+                                        <option value="may-cachtan">May đo áo dài cách tân</option>
+                                        <option value="thue">Thuê áo dài sự kiện / kỷ yếu</option>
+                                        <option value="khac">Tư vấn chọn mẫu khác</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-700 mb-1">Ngày mong muốn hẹn</label>
+                                    <input type="date" 
+                                           class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-heritage-red focus:ring-1 focus:ring-heritage-red text-sm outline-none transition-all">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-700 mb-1">Ghi chú thêm (chiều cao, cân nặng hoặc mẫu yêu thích)</label>
+                                <textarea rows="3" placeholder="Chia sẻ thêm về ý tưởng của bạn..." 
+                                          class="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:border-heritage-red focus:ring-1 focus:ring-heritage-red text-sm outline-none transition-all"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3.5 rounded-full red-gradient text-white font-semibold text-sm tracking-wide shadow-md hover:brightness-110 transition-all border border-heritage-gold/40 flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Gửi Thông Tin Đặt Lịch Hẹn</span>
+                            </button>
+                        </form>
+
+                        <!-- Thông báo gửi thành công -->
+                        <div id="successNotice" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs sm:text-sm text-center">
+                            <i class="fa-solid fa-circle-check text-emerald-600 text-base mb-1 block"></i>
+                            <strong>Đã gửi yêu cầu thành công!</strong> Chuyên viên may đo Hồn Việt sẽ liên hệ lại với bạn trong vòng 15 phút.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CHÂN TRANG (FOOTER) -->
+    <footer class="bg-heritage-charcoal text-white pt-16 pb-12 border-t-2 border-heritage-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-700">
+                
+                <!-- Cột giới thiệu thương hiệu -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full red-gradient flex items-center justify-center text-heritage-gold border border-heritage-gold">
+                            <i class="fa-solid fa-fan"></i>
+                        </div>
+                        <div>
+                            <span class="font-serif text-xl font-bold tracking-wider text-white block">HỒN VIỆT</span>
+                            <span class="text-[9px] tracking-[0.2em] text-heritage-gold uppercase font-semibold">Áo Dài Di Sản</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed font-light">
+                        Thương hiệu gìn giữ và phát triển vẻ đẹp áo dài truyền thống Việt Nam, mang tình yêu di sản vươn tầm năm châu.
+                    </p>
+                    <div class="flex items-center gap-3 text-sm text-gray-300">
+                        <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-full bg-white/10 hover:bg-heritage-red flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="w-8 h-8 rounded-full bg-white/10 hover:bg-heritage-red flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok" class="w-8 h-8 rounded-full bg-white/10 hover:bg-heritage-red flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-full bg-white/10 hover:bg-heritage-red flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Cột liên kết nhanh -->
+                <div class="space-y-3">
+                    <h4 class="font-serif font-bold text-heritage-gold text-sm uppercase tracking-wider">Khám Phá</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#hero" class="hover:text-heritage-gold transition-colors">Trang chủ</a></li>
+                        <li><a href="#heritage" class="hover:text-heritage-gold transition-colors">Lịch sử tà áo dài</a></li>
+                        <li><a href="#collections" class="hover:text-heritage-gold transition-colors">Bộ sưu tập áo cưới</a></li>
+                        <li><a href="#collections" class="hover:text-heritage-gold transition-colors">Áo dài cách tân nữ</a></li>
+                        <li><a href="#craftsmanship" class="hover:text-heritage-gold transition-colors">Bí quyết chọn vải lụa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột chính sách -->
+                <div class="space-y-3">
+                    <h4 class="font-serif font-bold text-heritage-gold text-sm uppercase tracking-wider">Dịch Vụ Khách Hàng</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#" class="hover:text-heritage-gold transition-colors">Hướng dẫn tự đo số đo tại nhà</a></li>
+                        <li><a href="#" class="hover:text-heritage-gold transition-colors">Chính sách bảo hành phom trọn đời</a></li>
+                        <li><a href="#" class="hover:text-heritage-gold transition-colors">Quy trình giao hàng toàn quốc & quốc tế</a></li>
+                        <li><a href="#" class="hover:text-heritage-gold transition-colors">Quy định thuê trang phục sự kiện</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột hệ thống cửa hàng -->
+                <div class="space-y-3">
+                    <h4 class="font-serif font-bold text-heritage-gold text-sm uppercase tracking-wider">Hệ Thống Không Gian</h4>
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-heritage-gold mt-0.5"></i>
+                            <span>Hà Nội: 68 Tràng Tiền, Quận Hoàn Kiếm</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-heritage-gold mt-0.5"></i>
+                            <span>Huế: 12 Lê Lợi, TP. Huế</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot text-heritage-gold mt-0.5"></i>
+                            <span>TP.HCM: 108 Đồng Khởi, Quận 1</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Dòng bản quyền -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+                <p>© 2026 Hồn Việt - Áo Dài Di Sản. Sẵn sàng cho GitHub Pages.</p>
+                <p class="flex items-center gap-1">
+                    Gìn giữ vẻ đẹp Việt với tất cả tấm lòng <i class="fa-solid fa-heart text-heritage-red text-xs"></i>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP CHI TIẾT SẢN PHẨM -->
+    <div id="productModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl border border-heritage-gold/40 relative">
+            <button onclick="closeModal()" aria-label="Đóng cửa sổ" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-white/80 hover:bg-heritage-red hover:text-white flex items-center justify-center transition-all">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="h-64 overflow-hidden bg-gray-100">
+                <img id="modalImg" src="" alt="Chi tiết sản phẩm" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6 space-y-3">
+                <span class="text-xs uppercase font-bold tracking-wider text-heritage-gold">Tuyệt Tác May Đo</span>
+                <h3 id="modalTitle" class="font-serif text-xl font-bold text-heritage-darkred">Tên Sản Phẩm</h3>
+                <p id="modalDesc" class="text-xs sm:text-sm text-gray-600 leading-relaxed font-light">Mô tả chi tiết</p>
+                
+                <div class="pt-4 border-t border-gray-100 flex items-center justify-end gap-3">
+                    <button onclick="closeModal()" class="px-5 py-2 rounded-full border border-gray-300 text-xs font-semibold text-gray-600 hover:bg-gray-50">
+                        Đóng
+                    </button>
+                    <a href="#contact" onclick="closeModal()" class="px-5 py-2 rounded-full red-gradient text-white text-xs font-semibold shadow hover:brightness-110">
+                        Đặt May Mẫu Này
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT XỬ LÝ TƯƠNG TÁC TRANG -->
+    <script>
+        // 1. Xử lý menu di động
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 2. Lọc sản phẩm theo danh mục
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Cập nhật trạng thái nút
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-heritage-red', 'text-white', 'border-heritage-red');
+                btn.classList.add('bg-heritage-cream', 'text-heritage-charcoal', 'border-heritage-gold/50');
+            });
+            event.target.classList.remove('bg-heritage-cream', 'text-heritage-charcoal', 'border-heritage-gold/50');
+            event.target.classList.add('bg-heritage-red', 'text-white', 'border-heritage-red');
+
+            // Ẩn / hiện thẻ tương ứng
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 3. Xử lý Modal chi tiết
+        const modal = document.getElementById('productModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalImg = document.getElementById('modalImg');
+
+        function openModal(title, desc, imgSrc) {
+            modalTitle.textContent = title;
+            modalDesc.textContent = desc;
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+
+        // Đóng khi click ngoài modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // 4. Xử lý form gửi thông tin đặt lịch
+        function handleBooking(e) {
+            e.preventDefault();
+            const notice = document.getElementById('successNotice');
+            notice.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                notice.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
